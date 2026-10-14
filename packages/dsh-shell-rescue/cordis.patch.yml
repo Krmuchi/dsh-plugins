@@ -1,0 +1,4 @@
+# dsh-shell-rescue bundle 层：注册插件入口。
+- insert:
+    - id: dsh-shell-rescue
+      name: dsh-shell-rescue

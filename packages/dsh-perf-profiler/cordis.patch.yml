@@ -1,0 +1,9 @@
+# dsh-perf-profiler bundle 层：注册插件入口。
+# 用户可在 profile 的 cordis.patch.yml 里按 id 覆盖 config，例如：
+# - id: dsh-perf-profiler
+#   name: dsh-perf-profiler
+#   config:
+#     outputDir: /path/to/perf-logs
+- insert:
+    - id: dsh-perf-profiler
+      name: dsh-perf-profiler
