@@ -4,14 +4,27 @@ DeepSeek Harness 插件集合（monorepo）。`packages/*` 下每个目录都是
 
 ## 包含的插件
 
-| 包 | 类型 | 一句话 |
-| --- | --- | --- |
-| [`dsh-perf-profiler`](packages/dsh-perf-profiler) | 观测 | 记录每次工具调用、模型流式请求与审批等待的耗时——先测量，再优化 |
-| [`dsh-shell-rescue`](packages/dsh-shell-rescue) | 修复 | 内置 `pwsh` 工具在进程创建前失败时透明改走直连通道，省掉整轮模型恢复往返 |
+| 包 | npm | 类型 | 一句话 |
+| --- | --- | --- | --- |
+| `dsh-perf-profiler` | [`@krmuchi/dsh-perf-profiler`](https://www.npmjs.com/package/@krmuchi/dsh-perf-profiler) | 观测 | 记录每次工具调用、模型流式请求与审批等待的耗时——先测量，再优化 |
+| `dsh-shell-rescue` | [`@krmuchi/dsh-shell-rescue`](https://www.npmjs.com/package/@krmuchi/dsh-shell-rescue) | 修复 | 内置 `pwsh` 工具在进程创建前失败时透明改走直连通道，省掉整轮模型恢复往返 |
 
 共同特征：**零第三方依赖**、纯 Node ESM、只做观测或兜底、任何内部失败都静默放行、不影响主流程。
 
 ## 安装
+
+### 插件市场（推荐）
+
+打开 DSH 的**设置 → 插件市场**，搜索插件名，点安装。
+
+### 命令行
+
+```
+dsh plugin --profile web add @krmuchi/dsh-perf-profiler
+dsh plugin --profile web add @krmuchi/dsh-shell-rescue
+```
+
+### 本地源码（开发用）
 
 在 DSH 的「插件管理」中安装，spec 填对应包路径（替换为你的实际克隆路径）：
 

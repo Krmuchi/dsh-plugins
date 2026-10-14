@@ -1,5 +1,16 @@
 # Changelog
 
+## 仓库
+
+### 发布准备（npm 上架）
+
+- 包名改为 scoped：`dsh-perf-profiler` → `@krmuchi/dsh-perf-profiler`，`dsh-shell-rescue` → `@krmuchi/dsh-shell-rescue`
+- 补 `peerDependencies`：`@deepseek-ai/dsh: >=0.2.0-rc.2`（此前完全未声明；DSH 加载时会按 `getDshRuntimeVersion()` 校验）
+- 补 `repository`（指回本仓库对应子目录）、`publishConfig.access: public`
+- 新增 `locale/en.json` + `locale/zh.json` 展示元数据（插件市场的卡片标题与描述），`exports` 加 `./locale/*.json`
+- 各包补 `LICENSE` 副本，`files` 白名单加 `locale` 与 `LICENSE`
+- README 安装段改为「插件市场 → 命令行 → 本地源码」三级，`link:` 降级为开发用
+
 ## packages/dsh-perf-profiler
 
 ### 0.1.0

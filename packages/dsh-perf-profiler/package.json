@@ -1,9 +1,17 @@
 {
-  "name": "dsh-perf-profiler",
+  "name": "@krmuchi/dsh-perf-profiler",
   "displayName": "DSH Perf Profiler",
   "description": "DeepSeek Harness 性能剖析插件：记录每次工具调用、模型流式请求与审批等待的耗时，输出 JSONL / summary 供分析。",
   "version": "0.1.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krmuchi/dsh-plugins.git",
+    "directory": "packages/dsh-perf-profiler"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "dsh-plugin",
     "deepseek-harness",
@@ -15,13 +23,19 @@
   "exports": {
     ".": "./lib/index.js",
     "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
     "./package.json": "./package.json"
   },
   "files": [
     "lib",
+    "locale",
     "cordis.patch.yml",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.2"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"

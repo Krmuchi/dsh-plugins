@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH Shell Rescue",
+    "description": "When the built-in pwsh tool fails before the process is created, runs the same command through a direct node:child_process channel and returns the built-in tool's own foreground shape — saving a whole model round-trip per failure."
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH 终端兜底",
+    "description": "内置 pwsh 工具在进程创建前失败时，改走直连 node:child_process 执行同一条命令，并返回内置工具同形的 foreground 结果——每次失败省下整轮模型往返。"
+  }
+}

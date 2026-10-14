@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH 性能剖析",
+    "description": "记录每次工具调用、模型流式请求与审批等待的耗时——先测量，再优化。输出 perf.jsonl 与聚合后的 summary.json。"
+  }
+}

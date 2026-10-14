@@ -1,0 +1,13 @@
+{
+  "name": "dsh-perf-profiler",
+  "owner": "Krmuchi",
+  "url": "https://github.com/Krmuchi/dsh-plugins/tree/main/packages/dsh-perf-profiler",
+  "category": "dev",
+  "description": {
+    "en": "Records how long every tool call, streaming model request and approval wait takes — measure first, then optimise. Writes perf.jsonl and an aggregated summary.json.",
+    "zh": "记录每次工具调用、模型流式请求与审批等待的耗时——先测量，再优化。输出 perf.jsonl 与聚合后的 summary.json。"
+  },
+  "npm": "@krmuchi/dsh-perf-profiler",
+  "install": "dsh plugin --profile web add @krmuchi/dsh-perf-profiler",
+  "capabilities": ["fs-write", "fs-read"]
+}

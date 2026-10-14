@@ -1,0 +1,13 @@
+{
+  "name": "dsh-shell-rescue",
+  "owner": "Krmuchi",
+  "url": "https://github.com/Krmuchi/dsh-plugins/tree/main/packages/dsh-shell-rescue",
+  "category": "wsl",
+  "description": {
+    "en": "When the built-in pwsh tool fails before the process is created, runs the same command through a direct node:child_process channel and returns the built-in tool's own foreground shape — saving a whole model round-trip per failure.",
+    "zh": "内置 pwsh 工具在进程创建前失败时，改走直连 node:child_process 执行同一条命令，并返回内置工具同形的 foreground 结果——每次失败省下整轮模型往返。"
+  },
+  "npm": "@krmuchi/dsh-shell-rescue",
+  "install": "dsh plugin --profile web add @krmuchi/dsh-shell-rescue",
+  "capabilities": ["shell", "fs-read", "env"]
+}

@@ -30,11 +30,23 @@ PATH 未刷新** 的机器：
 
 ## 安装
 
+### 方式 A：插件市场（推荐）
+
+打开 DSH 的**设置 → 插件市场**，搜索 `dsh-shell-rescue`，点安装。
+
+### 方式 B：命令行
+
 ```
-link:<本仓库路径>/packages/dsh-shell-rescue
+dsh plugin --profile web add @krmuchi/dsh-shell-rescue
 ```
 
 （plugin_manager install_bundle，安装即激活，无需重启。）
+
+### 方式 C：本地源码（开发用）
+
+```
+link:<本仓库路径>/packages/dsh-shell-rescue
+```
 
 ## 配置
 

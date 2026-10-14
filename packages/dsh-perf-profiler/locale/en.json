@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH Perf Profiler",
+    "description": "Records how long every tool call, streaming model request and approval wait takes — measure first, then optimise. Writes perf.jsonl and an aggregated summary.json."
+  }
+}

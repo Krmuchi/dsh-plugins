@@ -1,9 +1,17 @@
 {
-  "name": "dsh-shell-rescue",
+  "name": "@krmuchi/dsh-shell-rescue",
   "displayName": "DSH Shell Rescue",
   "description": "pwsh 工具在进程创建前失败（spawn UNKNOWN / CreateProcessAsUserW / sandbox backend 不可用）时，以直连 node:child_process 执行同一条命令并返回内置 pwsh 同形的 foreground 结果。按 ProgramFiles 环境变量、PATH 与注册表安装位置多路解析可执行文件，适配 Program Files 被重定向或 PATH 未刷新的机器。",
   "version": "0.3.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krmuchi/dsh-plugins.git",
+    "directory": "packages/dsh-shell-rescue"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "dsh-plugin",
     "deepseek-harness",
@@ -15,13 +23,19 @@
   "exports": {
     ".": "./lib/index.js",
     "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
     "./package.json": "./package.json"
   },
   "files": [
     "lib",
+    "locale",
     "cordis.patch.yml",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.2"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"

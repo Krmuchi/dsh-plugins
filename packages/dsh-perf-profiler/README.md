@@ -21,9 +21,19 @@ DeepSeek Harness 性能剖析插件：**先测量，再优化**。把每一步�
 
 ## 安装
 
-### 方式 A：插件管理器（推荐）
+### 方式 A：插件市场（推荐）
 
-在 DeepSeek Harness 的「插件管理」里安装，spec 填本包路径（替换成你的实际克隆路径）：
+打开 DSH 的**设置 → 插件市场**，搜索 `dsh-perf-profiler`，点安装。
+
+### 方式 B：命令行
+
+```
+dsh plugin --profile web add @krmuchi/dsh-perf-profiler
+```
+
+### 方式 C：本地源码（开发用）
+
+在 DSH 的「插件管理」里安装，spec 填本包路径（替换成你的实际克隆路径）：
 
 ```
 link:<本仓库路径>/packages/dsh-perf-profiler
@@ -35,11 +45,11 @@ link:<本仓库路径>/packages/dsh-perf-profiler
 link:D:/plugins/dsh-plugins/packages/dsh-perf-profiler
 ```
 
-### 方式 B：手动
+### 方式 D：手动
 
 1. 编辑 `~/.dsh/profiles/<profile>/package.json`：
-   - `dependencies` 加 `"dsh-perf-profiler": "link:<本仓库路径>/packages/dsh-perf-profiler"`
-   - `dsh.profile.bundles` 数组追加 `"dsh-perf-profiler"`
+   - `dependencies` 加 `"@krmuchi/dsh-perf-profiler": "^0.1.0"`
+   - `dsh.profile.bundles` 数组追加 `"@krmuchi/dsh-perf-profiler"`
 2. 在 profile 目录执行 `pnpm install`
 3. 重启 DSH 激活
 
